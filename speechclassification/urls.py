@@ -26,6 +26,8 @@ urlpatterns = [
     path('grade/', include('grade.urls')),
     path('audio/', include('audio.urls')),
     path('transcribe/', include('transcribe.urls')),
+    path('page1/', include('page1.urls')),
+    path('dashboard3/', include('dashboard3.urls')),
     path('admin/', admin.site.urls),   
 ]
 

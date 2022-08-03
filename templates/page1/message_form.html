@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- ============================================================== -->
+<!-- Start Page Content here -->
+<!-- ============================================================== -->
+
+<div class="content-page">
+    <div class="content">
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            {% include "base_page_title.html" %}
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <table>
+                                            {{ form.as_table }}
+                                        </table>
+                                        <p><input class="btn btn-success waves-effect waves-light" type="submit" value="Simpan"></p>
+                                    </form>
+                                </div> <!-- end col -->
+
+                            </div>
+                            <!-- end row-->
+
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card -->
+                </div><!-- end col -->
+            </div>
+            <!-- end row -->
+
+        </div> <!-- container -->
+
+    </div> <!-- content -->
+
+    {% include "base_footer.html" %}
+
+</div>
+
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+
+{% endblock %}
